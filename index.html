@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  
+}
+
+#Login {background-color:rgb(133, 126, 126);}
+#Texto {background-color:rgb(133, 126, 126);}
+#Lista {background-color:rgb(133, 126, 126);}
+#Parceiros {background-color:rgb(133, 126, 126);}
+
+footer{
+  text-align: center;
+  padding: 3px;
+  background-color: darksalmon;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Blog Html</h1>
+
+<p>Walter progamador:</p>
+
+<div id="Login" class="tabcontent">
+    <fieldset style="text-align:center;"><legend>Login e Senha</legend>
+        Nome:<input type="text" name="nome"><br>
+        Senha:<input type="password" name="senha"><br>
+
+        <button>Entrar</button>
+
+    </fieldset>
+</div>
+
+<div id="Texto" class="tabcontent">
+  <h1>HTML</h1>
+  <p style="text-align: justify;">HTML (abreviação para a HyperText Markup Language, que significa Linguagem de marcação de Hipertexto)
+    é uma linguagem de marcação utilizada para produzir páginas na web. documentos HTML podem seer interpretados por navegadores.</p> 
+
+    <p style="text-align: justify;">"Hipertexto" refere-se aos links que conectam páginas da web si, seja dentro de um único site entre sites. Links são um aspecto fundamental da web.
+        Ao carregar conteúdo da Internet e vinculá-lo a páginas criadas por outras pessoas, voçê se torna um participante ativo no world wide web.</p>
+</div>
+
+<div id="Lista" class="tabcontent">
+  <h1>Lista de Tags</h1>
+  
+  <ol type="I">
+    <li>&lt; head &gt;</li>
+    <li>&lt; body &gt;</li>
+    <li>&lt; Style &gt;</li>
+    <li>&lt fieldset &gt;</li>
+    <li>&lt img src &gt;</li>
+
+  </ol>
+
+  <fieldset style="text-align:right;"> <iframe width="560" height="315" src="https://www.youtube.com/embed/-FQP7hD-J6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </fieldset>
+ 
+</div>
+
+<div id="Parceiros" class="tabcontent">
+  <h1>Parceiros</h1>
+
+  <div class="w3-row-padding w3-margin-top">
+    <div class="w3-third">
+      <div class="w3-card">
+        <img src="parceira1.jpg" style="width:100%">
+        <div class="w3-container">
+          <h5>W3 Schools</h5>
+        </div>
+      </div>
+    </div>
+  
+    <div class="w3-third">
+      <div class="w3-card">
+        <img src="parceira2.png" style="width:100%">
+        <div class="w3-container">
+          <h5>Senac</h5>
+        </div>
+      </div>
+    </div>
+  
+    <div class="w3-third">
+      <div class="w3-card">
+        <img src="parceira3.png" style="width:100%">
+        <div class="w3-container">
+          <h5>GitHub</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+
+
+
+<button class="tablink" onclick="openCity('Login', this, 'green')" id="defaultOpen">Login</button>
+<button class="tablink" onclick="openCity('Texto', this, 'green')">Texto</button>
+<button class="tablink" onclick="openCity('Lista', this, 'green')">Lista</button>
+<button class="tablink" onclick="openCity('Parceiros', this, 'green')">Parceiros</button>
+
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<footer>
+  <p>Supoete<br>
+    <a 
+    href="maiLto:hege@axample.com">hege@example.com
+  </a>
+  </p>
+  <h3> TELEFONE: 4002-8922</h3>
+</footer>
+   
+</body>
+</html>
